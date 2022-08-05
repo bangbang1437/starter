@@ -1,0 +1,31 @@
+@import "vars";
+
+.btn {
+  color: $accent;
+  border: 1px solid $accent;
+  font-weight: 600;
+  padding: 6px 34px;
+  transition: all 500ms ease;
+  text-decoration: none;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: $accent;
+    color: #ffffff;
+  }
+}
+
+.btn_buy
+
+@extend .btn
+{
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 16);
+  padding: 14px 40px;
+  background: $accent;
+
+&:hover {
+  background-color: $light_accent;
+}
+
+}

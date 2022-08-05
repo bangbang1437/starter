@@ -1,6 +1,6 @@
 import '../scss/app.scss';
+import $ from 'jquery';
 
-/* Your JS Code goes here */
-
-/* Demo JS */
-import './demo.js';
+$( document ).ready(function() {
+    //JQuery code here
+});
