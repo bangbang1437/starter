@@ -2,30 +2,29 @@
 
 .btn {
   color: $accent;
-  border: 1px solid $accent;
+  border: 0.1px solid $accent;
   font-weight: 600;
-  padding: 6px 34px;
-  transition: all 500ms ease;
+  padding: 10px 25px 10px 30px;
+  transition: all 0.7s ease;
   text-decoration: none;
   border-radius: 20px;
 
+
   &:hover {
-    background-color: $accent;
+    background-color: $light_accent;
     color: #ffffff;
   }
 }
 
-.btn_buy
-
-@extend .btn
-{
-  color: #fff;
+.btn_buy {
+  @extend .btn ;
+  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 16);
-  padding: 14px 40px;
   background: $accent;
+  border: none;
 
-&:hover {
-  background-color: $light_accent;
-}
+  &:hover {
+    background-color: $light_accent;
 
+  }
 }
