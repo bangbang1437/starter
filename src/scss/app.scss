@@ -224,17 +224,6 @@ body {
       font-weight: 500;
       font-size: 30px;
       padding-bottom: 35px;
-
-      &:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 1px;
-        background: white;
-        bottom: 0;
-        top: 0;
-        right: 0;
-      }
     }
 
     > p {
