@@ -81,6 +81,7 @@
   },
   "target": "web",
   "dependencies": {
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "jquery.fancybox": "^2.1.5"
   }
 }
