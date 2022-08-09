@@ -18,24 +18,31 @@ html {
 }
 
 body {
+  overflow-x: hidden;
+  /*The overflow-x property defines
+         overflow handling in the horizontal direction
+            (i.e. overflow from the left and
+                right sides of the block)*/
   font-family: "Montserrat";
-  color: white;
-  background: rgba(5, 221, 214, 30);
-  background: linear-gradient(0deg, rgba(47, 18, 116, 1) 11%, rgba(108, 119, 253, 1) 51%, rgba(3, 209, 255, 1) 78%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 1500px;
+  height: 3000px;
 }
 
 .container {
   max-width: 1224px;
-  margin: 0 auto;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
 
 /*Header menu*/
 #header {
+
   position: fixed;
   /*Positions the object exactly the same as
          absolute, but relative to window.*/
@@ -138,7 +145,12 @@ body {
 
 /*baner with sneakers & description*/
 #top_Banner {
-  padding-top: 170px;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  background: rgba(5, 221, 214, 30);
+  background: linear-gradient(0deg, rgba(47, 18, 116, 1) 11%, rgba(108, 119, 253, 1) 51%, rgba(3, 209, 255, 1) 78%);
 
   .descr_Buy {
     align-items: center;
@@ -150,11 +162,8 @@ body {
 
   .left_Stemets {
     display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex-direction: column;
     width: 50%;
-    margin-bottom: 200px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -193,17 +202,33 @@ body {
 }
 
 .right_Stemets {
-  flex: 0 0 50%;
-  max-width: 50%;
+  position: relative;
+  width: 50%;
+  height: 100%;
 
-  .left_Boots {
+
+  .sneaker {
+
     z-index: 1;
     position: absolute;
-    width: 45%;
-    left: 555px;
-    top: 164px;
-    transform: rotate(-28deg);
+    left: 30px;
+    top: -240px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /*The aspect-ratio CSS property sets the preferred
+      aspect ratio for the window
+        to be used when calculating automatic dimensions
+           and some other layout functions.*/
+    cursor: pointer;
+    /*You can hover the mouse
+           over the picturesм*/
+    /*1 shades of gray,
+             0 natural colors*/
+    transition: all 1s ease;
 
+    &:hover, &.active {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -216,51 +241,147 @@ body {
 }
 
 #advantages {
+  margin-bottom: 300px;
+  position: relative;
 
-  .descr_Advantages {
+  > img {
+    width: 80%;
+    right: 230px;
+    position: absolute;
+    opacity: 13%;
+    bottom: -280px;
+  }
+}
+
+.descr_Advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 15px 220px 15px 220px;
+
+  > h2 {
+    position: relative;
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 35px;
+  }
+
+
+  > p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+
+.points_Advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 75px 20px 0 20px;
+
+  i {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  p {
+    line-height: 28px;
+  }
+
+  .points_item {
+    max-width: 33%;
+    text-align: center;
+  }
+}
+
+#partners {
+  display: flex;
+  align-items: center;
+
+
+  .partners_comments {
+    gap: 200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding: 15px 220px 15px 220px;
 
-    > h2 {
+    .comments {
       position: relative;
-      font-weight: 500;
-      font-size: 30px;
-      padding-bottom: 35px;
+      gap: 3px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        height: 1px;
+        filter: blur(1px);
+        width: 80%;
+        background-color: black;
+      }
+
+      .item_rev {
+        text-align: center;
+        display: none;
+        animation: opac .6s;
+
+        &.active {
+          display: block;
+        }
+
+        > .quotes {
+          font-size: 18px;
+          max-width: 660px;
+          margin: 0 auto 50px;
+        }
+
+        > .name {
+          margin-top: 16px;
+          font-weight: 700;
+        }
+
+        > .position {
+          font-weight: 500;
+        }
+        img {
+          opacity: 85%;
+          aspect-ratio: 1/1;
+          max-width: 6%;
+          border-radius: 50%;
+          object-fit: cover;
+          margin: 0 auto;
+
+        }
+      }
+
+
     }
 
+    .sub_partners {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-around;
 
+      > img {
+        cursor: pointer;
+        /*You can hover the mouse
+               over the picturesм*/
+        width: 8%;
+        filter: grayscale(1);
+        /*1 shades of gray,
+                 0 natural colors*/
+        transition: all 1.3s;
 
-    > p {
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 28px;
+        &:hover, &.active {
+          filter: grayscale(0);
+          transform: scale(1.4);
+        }
+      }
     }
   }
-
-  .points_Advantages {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 75px 20px 0 20px;
-
-    i {
-      font-size: 50px;
-      padding-bottom: 20px;
-    }
-
-    p {
-      line-height: 28px;
-    }
-
-    .points_item {
-      max-width: 33%;
-      text-align: center;
-    }
-  }
-
-
 }
