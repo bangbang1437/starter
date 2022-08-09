@@ -2,6 +2,7 @@ import '../scss/app.scss';
 import $ from 'jquery';
 import * as WOW from "es-module-lexer";
 
+/*Slider*/
 $(document).ready(function () {
     var partnersImg = document.querySelectorAll(".rev");
     console.log(partnersImg);
