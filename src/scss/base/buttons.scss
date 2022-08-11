@@ -30,3 +30,13 @@
 
   }
 }
+
+.btn_Form {
+  @extend .btn;
+  background-color: $header_accent;
+  border: 2px solid $light_accent;
+  border-radius: 0;
+  max-width: 100%;
+  width: 250px;
+  height: 50px;
+}
