@@ -80,5 +80,8 @@
     "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
   "target": "web",
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "jquery.fancybox": "^2.1.5"
+  }
 }
