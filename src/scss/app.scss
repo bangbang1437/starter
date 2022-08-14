@@ -388,31 +388,41 @@ main {
 }
 
 #form_spons {
+  padding: 50px 0 150px 0;
   margin-top: 200px;
 
   .sponsors_regForm {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
     .sponsors {
-      margin-left: 200px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: space-around;
       align-items: center;
-      gap: 35px;
 
       > h4 {
         font-size: 18px;
         font-weight: 600;
+
       }
 
       > img {
-        width: 50%;
+        width: 70%;
+        height: 50px;
       }
     }
 
     .form {
-      margin-right: 200px;
+      width: 25%;
+      padding: 15px 0 15px 0;
+      border: 0.1px;
+      box-shadow: 0px 0px 70px 10px rgba(98, 91, 237, 1);
+      margin: 0 auto;
       gap: 10px;
       display: flex;
       flex-direction: column;
@@ -452,26 +462,50 @@ main {
 }
 
 #footer {
+
+  padding-top: 25px;
   background-color: $header_accent;
   opacity: 75%;
 
 
   .wrapper_footer {
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
     .descr_footer {
-      gap: 15px;
-      display: flex;
-      flex-direction: column;
-      width:15%;
+      display: block;
+      width: 15%;
+
+      > img {
+        padding-bottom: 20px;
+        width: 50%;
+      }
     }
 
     .footer_col {
-      gap: 15px;
-      display: flex;
-      flex-direction: column;
+      display: block;
+      width: 15%;
+
+      .btn_Buy {
+        margin: 25px;
+        padding: 10px 20px 10px 20px;
+      }
+
+      > h4 {
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      > ul li a {
+        padding: 3px 0;
+        color: black;
+        display: block;
+        font-weight: 500;
+        gap: 20px;
+      }
     }
   }
 }
