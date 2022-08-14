@@ -52,6 +52,3 @@ $("img, a").on("dragstart", function (event) {
 });
 
 
-
-
-
